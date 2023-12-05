@@ -73,3 +73,8 @@ body{
     cursor: pointer;
 
 }
+
+#eyeicon{
+    position: absolute;
+    right: 210px;
+}

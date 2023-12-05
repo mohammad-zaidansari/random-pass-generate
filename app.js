@@ -1,4 +1,5 @@
 const passwordBox = document.getElementById("password");
+let eyeIcon = document.getElementById("eyeicon");
 const length = 12;
 
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -22,6 +23,16 @@ function createPassword(){
 }
 
 function copyPassword(){
-    passwordBox.select();
+    passwordBox.select();            //copy input text 
     document.execCommand("copy");
+}
+
+eyeIcon.onclick = function(){        // for hide and show 
+    if(password.type == "text"){
+        password.type = "password";
+        eyeIcon.src = "images/eye-close.png"
+    }else{
+        password.type = "text"
+        eyeIcon.src = "images/eye-open.png"
+    }
 }
